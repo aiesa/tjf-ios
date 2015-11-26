@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+    <head>
+
+        <script>
+        (function() {
+    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode("@-ms-viewport{width:auto!important}")
+        );
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+})();
+
+</script>
+
+        <title>iMonitor</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />
+        -->
+
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <!--<script src="js/modernizr.custom.js"></script>-->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+        <link rel="stylesheet" type="text/css" href="css/buttons.css"  />
+        <link rel="stylesheet" type="text/css" href="css/badges.css"  />
+        <link rel="stylesheet" type="text/css" href="css/badges.css"  />
+        <link rel="stylesheet" type="text/css" href="css/forms.css"  />
+        <link rel="stylesheet" type="text/css" href="css/grid.css"  />
+        <link rel="stylesheet" type="text/css" class="ui" href="css/packaged/css/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/packaged/css/semantic.css">
+        <link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+        <link rel="stylesheet" type="text/css" href="datepicker/DateTimePicker.min.css"  />
+
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+        <script type="text/javascript" charset="utf-8" src="./appframework/appframework.js"></script>
+        <script>
+            //HASNOLMIZAM28082014
+            $.feat.nativeTouchScroll=true;
+
+        </script>
+
+        <!-- include af.desktopBrowsers.js on desktop browsers only -->
+        <script type="text/javascript" charset="utf-8" src="./cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.actionsheet.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.passwordBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.popup.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./appframework/ui/appframework.ui.js"></script>
+
+        <!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+        <!-- <script type="text/javascript" charset="utf-8" src="./ui/transitions/all.js"></script> -->
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideUp.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./jquery.transit.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./jquery.validate.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./jquery.serializejson.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./datepicker/DateTimePicker.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/modernizr.custom.23439.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./function.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ba-linkify.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb2yeWppYNIWufRhrywjx5M-1NK7PB2sE&sensor=true"></script>
+        <script src="jquery.app-folders.js"></script>
+
+        <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="datepicker/DateTimePicker-ltie9.css" />
+  <script type="text/javascript" src="./datepicker/DateTimePicker-ltie9.js"></script>
+ <![endif]-->
+
+<style type="text/css">
+    span.deleteicon {
+        position: relative;
+    }
+    span.deleteicon span {
+        position: absolute;
+        display: block;
+        top: 8px;
+        right: 6px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        background-color: rgb(207, 204, 204);
+        color: white;
+        align-content: center;
+        padding: 2px;
+        width: 23px;
+        text-align: center;
+        border-radius: 31px;
+        height: 22px;
+    }
+    span.deleteicon input {
+        padding-right: 16px;
+    }
+    #afui #main #search-company-list {
+
+    }
+    .company_list a:link {
+        text-decoration: none;
+        color: #574A49;
+    }
+
+    .company_list a:visited {
+        text-decoration: none;
+        color: #4F5D73;
+    }
+
+    #companylist li.company_list {
+        border-bottom: 1px solid #ccc;
+    }
+
+    hr.style-four {
+        height: 12px;
+        border: 0;
+        box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+    }
+
+    .company_list .item {
+        opacity: 0;
+    }
+
+    .company_list > h3 {
+        /*margin-left: 5.1em;*/
+        height: 32px;
+        font-weight: 200;
+        /*overflow: hidden;*/
+        margin-bottom: 30px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    li.company_list {
+        padding: 10px;
+    }
+
+    #afui .panel h2.interaction-header {
+        margin: -34px -14px 0 -14px;
+        border-top-left-radius:  15px;
+        border-top-right-radius: 0px;
+        border: none;
+        padding-right: 0px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        padding-left: 25px;
+
+    /*bayang*/
+    -webkit-box-shadow: 0 8px 8px -6px #ccc;
+       -moz-box-shadow: 0 8px 8px -6px #ccc;
+            box-shadow: 0 8px 8px -6px #ccc;
+
+    }
+
+    .bayang {
+    /*bayang*/
+    -webkit-box-shadow: 0 8px 8px -6px #ccc;
+       -moz-box-shadow: 0 8px 8px -6px #ccc;
+            box-shadow: 0 8px 8px -6px #ccc;
+    }
+
+
+    .company_list a:active {
+        text-decoration: none;
+    }
+    .menu_list {
+        display: table;
+        width: 100%;
+    }
+    .menu_list .accountname {
+        width: 130px;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: bottom;
+        display: inline-block;
+    }
+    .menu_list a {
+        display: table-cell;
+    }
+    .company_list:nth-child(odd)
+    {
+        background: #fff;
+    }
+    .company_list:nth-child(even)
+    {
+        background: #fff;
+    }
+    .comp_details {
+        max-height: 0em;
+        opacity: 0;
+        height: auto;
+        margin: 0 auto;
+        /*overflow: hidden;*/
+        -webkit-transition: opacity 0.5s ease-out;
+        -moz-transition: opacity 0.5s ease-out;
+        -o-transition: opacity 0.5s ease-out;
+        transition: opacity 0.5s ease-out;
+    }
+
+    .comp_details.halen {
+        max-height: 9999em;
+        opacity: 1;
+        border: 0px #E3000B solid;
+        margin: 1em -10px 1em -10px;
+        padding: 5px;
+        background-color: #f7f7f7;
+       /* border-radius: 31px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+    }
+
+    .tab-content {
+        display: none;
+        padding: 10px;
+        border: 1px;
+    }
+    #afui i.fa {
+        border: 0;
+    }
+    .tab-content.tab-selected {
+        display: block;
+    }
+    .folderContent {
+        max-height: 9999em;
+        opacity: 1;
+        border: 0px #e3000b solid;
+        margin: 0 0 1em 0;
+        padding: 10px;
+        background-color: #f7f7f7;
+        /*border-radius: 31px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+    }
+
+    .history-arrow {
+        background-color: rgb(227, 0, 11);
+        position: absolute;
+        right: 6px;
+        margin-top: -20px;
+        color: white;
+        padding: 3px;
+        border-radius: 10px;
+    }
+    .subordinate-arrow {
+        position: absolute;
+        right: 6px;
+        margin-top: -20px;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    #afui select {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top right;
+        background-image: url('images/downarrow.png');
+    }
+
+    #folder-current-user h2.user-name {
+        color: #000000;
+        vertical-align: top;
+        padding-top: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    #folder-current-user {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    div#folder-current-user > * {
+        text-align: left;
+    }
+
+    strong.user-name {
+        font-size: 1.1em;
+    }
+
+    .close-folder {
+        position: absolute;
+        right: 0;
+        background-color: rgb(173, 173, 173);
+        color: white;
+        align-content: center;
+        padding: 6px;
+        width: 26px;
+        text-align: center;
+        border-radius: 31px;
+    }
+
+    .delete-attachlist {
+        float: right;
+        margin-top: -23px;
+        background-color: rgb(173, 173, 173);
+        color: white;
+        align-content: center;
+        padding: 6px;
+        width: 28px;
+        text-align: center;
+        border-radius: 31px;
+    }
+
+    .delete-attachlist > * {
+        color: white;
+    }
+
+    .delete-list, .delete-kpi {
+        float: right;
+        margin-top: -6px;
+        background-color: rgb(173, 173, 173);
+        color: white;
+        align-content: center;
+        padding: 6px;
+        width: 26px;
+        text-align: center;
+        border-radius: 31px;
+    }
+
+    /*
+    Disable font smoothing in mobile.
+    */
+    #afui .fa {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .users-num-list li {
+        list-style: none;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: 0px 0px 1px 1px;
+    }
+    .users-num {
+        right: 3em;
+        position: absolute;
+    }
+
+    .weeks-num
+    {
+        right: 8em;
+        position: absolute;
+    }
+
+    .folder-positioner {
+        margin-left: 1px;
+        margin-right: 1px;
+        padding-top: 20px;
+    }
+    .app-folders-container { margin: 0 auto;}
+
+    .jaf-container {
+        position: relative;
+        padding: 0em 1em;
+    }
+    .jaf-row {
+        zoom: 1;
+    }
+    .folder {
+        display: table-cell;
+        height: 100px;
+        width: 100%;
+    }
+
+    .clear {
+        clear: both;
+    }
+    .fa-stack {
+        font-size: 2.8em;
+    }
+    #company-list-button.button {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .folder a:link {
+        text-decoration: none;
+        color: rgb(102, 55, 55);
+    }
+    .input-group-addon {
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        color: #555555;
+        text-align: center;
+        background-color: #eeeeee;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+    }
+
+    .input-grouping .form-control {
+        display: table-cell;
+    }
+    .input-group-addon, .input-group-btn, .input-group .form-control {
+        display: table-cell;
+    }
+    .input-group-addon:first-child {
+        border-right: 0;
+    }
+    .input-grouping .form-control:last-child {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .input-grouping .form-control {
+        position: relative;
+        z-index: 2;
+        float: left;
+        margin-bottom: 0;
+    }
+    .input-grouping {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width: 90%;
+        margin: auto;
+        max-width: 400px;
+    }
+
+    #afui_mask .ui-loader .ui-icon {
+        width: 100%;
+    }
+    #afui_mask  .ui-icon-loading {
+        background-size: contain;
+        width: auto;
+    }
+    #afui_mask h1{
+        display: none;
+    }
+
+    #afui_mask {
+        top: 1%;
+    }
+    #loginbutton {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-group-addon, .input-group-btn {
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555555;
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    .form-control:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+    .form-control::-moz-placeholder {
+        color: #999999;
+        opacity: 1;
+    }
+    .form-control:-ms-input-placeholder {
+        color: #999999;
+    }
+    .form-control::-webkit-input-placeholder {
+        color: #999999;
+    }
+    .form-control[disabled],
+    .form-control[readonly],
+    fieldset[disabled] .form-control {
+        cursor: not-allowed;
+        background-color: #eeeeee;
+        opacity: 1;
+    }
+    .input-group-addon:first-child {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .company-logo{
+        /* float: left; */
+        font-size: 51px;
+        position: absolute;
+        /* font-style: oblique; */
+        font-weight: 700;
+        margin: -8px -3px;
+    }
+    h2.interaction-header {
+        background-color: #cccccc;
+        color: black;
+        padding-left:20px;
+    }
+    .margin-bottom-sm {
+        margin-bottom: 5px !important;
+    }
+    #headlogin {
+        text-align: center;
+        background-color:none;
+        min-height: 200px;
+        padding: 10px;
+        top: 0px;
+    }
+    #loginfooter {
+        text-align: center;
+        font-size: 10px;
+        bottom: 0;
+        right: 0px; left: 0px;
+    }
+    #loginfooter p {
+        font-size: 10px;
+    }
+    #loginarea {
+        text-align: center;
+        min-height: 1em;
+    }
+
+    .circular {
+         width: 65px;
+         height:65px;
+         background-size: cover;
+         border-radius: 80px;
+         -webkit-border-radius: 50px;
+         -moz-border-radius: 50px;
+
+        /* box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+
+    }
+    img.circular {
+        margin-top: 5px;
+    }
+
+    #dashboard p.user-name {
+        font-size: 12px;
+        width: 100px;
+        font-style: italic;
+        text-overflow: ellipsis;
+        height: 41px;
+        overflow: hidden;
+    }
+
+    .bottom_dashboard {
+      width: 100%;
+      z-index: 99;
+      bottom: 0px;
+      position:relative;
+      clear:none;
+      overflow:hidden;
+    }
+    .bottom_dashboard img {
+      position:relative;
+      z-index:1;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .bottom_dashboard .desc {
+       font-size: 14px;
+       color: #ffffff;
+      display:block;
+      position:relative;
+      width:100%;
+      top:30%;
+      left:0;
+      z-index:2;
+      text-align:center;
+    }
+
+    .tab-info p > span {
+        font-weight: bold;
+        display: block;
+    }
+
+    .bottom_dashboard img {
+        position:relative;
+        z-index:1;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bottom_dashboard .desc {
+        font-size: 14px;
+        color: #ffffff;
+        display:block;
+        position:absolute;
+        width:100%;
+        top:30%;
+        left:0;
+        z-index:2;
+        text-align:center;
+    }
+    a.button i.fa {
+        color: #E3000B;
+    }
+
+    red {
+        color: red;
+    }
+
+    .company-numbering{
+        /* float: left; */
+        font-size: 51px;
+        opacity: 0.2;
+        position: absolute;
+        /* font-style: oblique; */
+        font-weight: 700;
+        margin: -8px -3px;
+    }
+
+    #dashboard .company-button {
+        position: absolute;
+        width: 70px;
+        margin-top: -40px;
+        margin-right: 30px;
+    }
+
+    .interaction-detail {
+        display: none;
+    }
+
+    .interaction-detail.showen {
+        display: block;
+    }
+    .company_profile {
+        display: inline-block;
+        margin-left: 10px;
+
+    }
+    .chat-people-pic-grid i.fa {
+        font-size: 3em;
+    }
+
+    .company_list:not(.magelan) .comp_details
+    {
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .company-phone-contact {
+        display: block;
+        position: absolute;
+        width: 84%;
+        border: 1px #666 solid;
+        margin: 0 0 1em 0;
+        padding: 10px;
+        background-color: white;
+        /*border-radius: 31px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+        z-index: 10;
+        opacity: 0;
+        display: none;
+        word-wrap: break-word;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    .company-phone-contact.halen {
+        opacity: 1;
+        display: block;
+        background-color: #e9e9e9;
+        border: none;
+        border-radius: inherit;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    }
+
+    #afui .y-scroll, #afui .panel.y-scroll {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+
+    #companylist .company-phone-contact li {
+        padding: 5px;
+    }
+
+    .company-phone-contact li {
+        font-weight:  bold;
+    }
+
+    .company-phone-contact span{
+        font-weight:  normal;
+    }
+
+    #list_scroller {
+        margin: 0px -10px;
+    }
+    #companylist li#searchrow {
+        padding-bottom: 0px
+    }
+    div#navbar a.company_button {
+        width: 100%;
+        height: 100%;
+    }
+    div#navbar.footer {
+        background-color: transparent;
+        padding: 5px;
+    }
+
+    .tt-query {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    }
+    .tt-hint {
+        color: #999999;
+    }
+    .count_no {
+        margin-bottom:-10px;
+        font-size:16px;
+        font-weight:bold;
+        color:#848484;
+    }
+    .tt-dropdown-menu {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 12px;
+        padding: 8px 0;
+        width: 422px;
+    }
+    .tt-suggestion {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 3px 20px;
+    }
+    .tt-suggestion.tt-cursor {
+        background-color: #0097CF;
+        color: #FFFFFF;
+    }
+    .tt-suggestion p {
+        margin: 0;
+    }
+    .tt-dropdown-menu {
+        height: 200px;
+        overflow-y: auto;
+    }
+    .twitter-typeahead {
+        width: 100%;
+    }
+
+    ul.list {
+        /*width: 100%;*/
+    }
+    .company_profile span{
+        font-weight: bold;
+    }
+    .sreshow
+    {
+        display: none;
+    }
+
+    #afui form label {
+        font-size: 12px;
+        height: 10px;
+    }
+
+    #afui label.error {
+        color: red;
+        font-size: 12px;
+        width: 100%;
+        padding: 8px 3px 0 0;
+    }
+    #afui label.error:after {
+        content:'';
+        display:block;
+        clear: both;
+    }
+    #afui .input-group {
+        margin-top: 10px;
+    }
+    .priority-group {
+        min-height: 6em;
+    }
+
+    .contact-list li {
+        padding: 10px;
+    }
+
+    #afui .error_display_block
+    {
+        width: 100%;
+        height: 15em;
+        padding: 20px;
+        text-align: center;
+        font-size: 2em;
+        line-height: 15em;
+        color:rgb(169, 169, 168);
+        background-image: url('bg_imon.png');
+        background-size: cover;
+    }
+
+    .error_display {background-image:url('bg_imon.png')
+        text-align: -webkit-center;
+    }
+
+    #afui .button-grouped i.fa {
+        border: 0;
+        display: inline;
+        width: 0;
+    }
+    .front-td {
+        width: 50%  !important;
+        height: 25%  !important;
+    }
+
+    .front-tr{
+    background: #fff;
+    }
+
+    table #user-row {
+        height: 20%;
+        vertical-align: top;
+    }
+
+    li.company_list h3{
+        font-weight: 200;
+        color: #666;
+        min-height: 3em;
+    }
+
+    table.grid-positioner {
+        width: 100%;
+        height: 100px;
+    }
+
+    ul.users-num-list li {
+        border-bottom: 1px solid #ccc;
+        padding-right: 30%;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .content {
+        min-height: 450px;
+    }
+
+    .attachment-basic-list a {
+        overflow: hidden;
+        width: 100%;
+        margin-left: 15px;
+        white-space: nowrap;
+    }
+
+    .linken {
+        overflow: hidden;
+        width: 85%;
+        margin-left: 15px;
+        white-space: nowrap;
+    }
+
+    #afui .redbutton {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:6px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+    }
+
+    span[data-field]
+    {
+       display: inline-block;
+        height: 40px;
+        padding: 10px;
+        width: 66%;
+        border-bottom: 1px solid #ccc;
+    }
+    #afui li a.load-more-button{
+        padding: 10px;
+        margin:0px;
+        background-color:#E3000B;
+        color:white;
+    }
+
+    #afui .redbutton.pressed {
+        background: #000;
+        color: #FFF;
+    }
+
+    #navbar.footer {
+        height: 63px;
+    }
+
+    #setting.divider.settings {
+        height: 43px;
+        font-size: 16px !important;
+    }
+    #user-row {
+        text-align: left;
+    }
+    #user-row p {
+        font-size: 12px;
+        line-height: 1em;
+    }
+
+    .img_file img {
+       height: auto;
+       width:100%;
+       background-size: contain;
+       background-repeat: no-repeat;
+    }
+
+    #afui .label.DP, .cbp_tmicon.DP {
+        background-color: rgb(255, 165, 0)!important;
+    }
+
+    #afui .label.BM, .cbp_tmicon.BM {
+        background-color: rgba(239, 200, 130, 1)!important;
+    }
+
+    #afui .label.IJ, .cbp_tmicon.IJ {
+        background-color: rgb(255, 165, 0)!important; /*#54A3F7*/
+    }
+
+    #afui .label.LJ, .cbp_tmicon.LJ {
+        background-color: #EA314D!important;
+    }
+
+    #afui .label.SS, .cbp_tmicon.SS {
+        background-color: #7AA36E!important;
+    }
+
+    #afui .label.PS, .cbp_tmicon.PS {
+        background-color: #EA314D!important;
+    }
+
+    #afui .label.DJ, .cbp_tmicon.DJ {
+        background-color: rgb(255, 165, 0) !important;
+    }
+
+    .latest-generated h3 {
+        font-weight: 200;
+        color: #555;
+    }
+    .chat-people-message div b
+    {
+        color: blue;
+    }
+
+    .latest-interaction .description {
+        font-style:italic;
+        font-size:12px;
+        margin-top:5px;
+        margin-right:30px;
+        color: #b9b9bd;
+    }
+
+    .ui.label {
+        font-size: 12px;
+    }
+    ul.dot {
+        list-style-type: disc;
+        margin-left: 20px;
+        color: red;
+        text-decoration: underline;
+    }
+
+    #companyDetail .comp_arrow {
+        display: none;
+    }
+    .contactS {
+        list-style: none;
+        margin: 20px;
+    }
+
+    .contactSLi{
+    padding-bottom:10px;
+    }
+
+    .interaction-tab-button .tab-button {
+        width: 50%;
+    }
+
+    #companyContact .contactS li  {
+        border:none;
+    }
+
+    #summary-box li {
+        list-style: none;
+    }
+
+    .historyText{
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    padding: 8px;
+    }
+
+    .historyText2{
+    background-color: #edf9f9;
+    border-radius: 3px;
+    padding: 8px;
+    }
+
+    .amr-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .amr-content td {
+        word-wrap: break-word;
+        vertical-align: top;
+    }
+
+    .dtpicker-comp.year:before {
+        content: "Year";
+    }
+    .dtpicker-comp.month:before {
+        content: "Month";
+    }
+    .dtpicker-comp.day:before {
+        content: "Day";
+    }
+    .dtpicker-comp.hour:before {
+        content: "Hour";
+    }
+    .dtpicker-comp.minutes:before {
+        content: "Minutes";
+    }
+
+    .dtpicker-comp.meridiem:before {
+        content: "\00a0";
+    }
+
+    .dtpicker-comp.hour {
+        border-left: 2px solid rgb(215, 211, 211);
+    }
+    .dtpicker-comp.meridiem {
+        border-right: 2px solid rgb(215, 211, 211);
+    }
+
+    .dtpicker-comp.hour > *, .dtpicker-comp.minutes > *, .dtpicker-comp.minutes, .dtpicker-comp.hour, .dtpicker-comp.meridiem, .dtpicker-comp.meridiem > * {
+        background-color: #EEE;
+    }
+
+    .ui.grey.segment {
+        border-top: .2em solid #9D9D9D;
+    }
+    .mapsimage {
+        background-image: url('images/mapsicon.png');
+        width: 51px;
+        height: 51px;
+        background-size: contain;
+        float:right;
+        background-repeat: no-repeat;
+    }
+
+@media only screen and (max-width: 480px){
+    .emailImage {
+        height:auto !important;
+        max-width:600px !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width : 640px){
+  /* some CSS here */
+    #afui .button i.fa {
+        float: none;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+ .folder-positioner {
+    zoom: 1.5;
+ }
+}
+
+</style>
+</head>
+    <body>
+        <div id="afui" >
+            <!-- this is the splashscreen you see. -->
+            <div id="splashscreen" class='ui-loader heavy'>
+               Internal Error
+                <br>
+                <br>
+                <span class='ui-icon ui-icon-loading spin'></span>
+                <h1>Starting app</h1>
+            </div>
+            <div id="header">
+            </div>
+            <div id="content">
+            <!-- DASHBOARD -->
+                <div title='iMonitor' class="panel" id="frontpanel" selected="true" data-nav="none" data-aside="sidemenu" data-footer="none" data-load="loadedFrontPanel" style="padding:0px">
+                    <div class="wrap" style="opacity:0;display:none">
+                        <div class="content">
+                            <div class="left-content">
+                                <div class="start-left-content-colum1">
+                                    <div class="status-grid">
+                                        <div class="status-grid-head">
+                                        </div>
+                                        <div class="status-people-pic">
+                                            <table class="grid-positioner block">
+                                                <tr>
+                                                    <td id="user-row">
+                                                        <div class="user-icon circular" src="images/img_placebo.jpeg"
+                                                        style="box-shadow: 1px 1px 9px #c5c3c3;zoom:1.3;float:left;margin-right: 10px;margin-top:8px;background-position:center;background-image:url(images/img_placebo.jpeg)"></div>
+                                                        <div class="user-text-info">
+                                                            <br>
+                                                            <p class="user-name" style="font-size:16px;font-weight:bold;color:#000000;margin-top:10px"></p>
+                                                            <p class="user-position" style="margin-top:0px;font-size:14px;font-weight:normal;color:#717171"></p>
+                                                            <p class="user-division" style="margin-top:-7px;font-size:14px;font-weight:normal;color:#717171"></p>
+                                                            <p class="user-email" style="margin-top:-7px;font-size:14px;font-weight:normal;color:#717171"></p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <SELECT class="daerah_select" name="">
+                                                <option value="SEMUA" class="hidedaerah">SEMUA</option>
+                                            </SELECT>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="social_network_likes bayang">
+                                    <ul id="summary-box">
+                                        <li><a href="#companylist/PJK" class="tweets">
+                                            <div class="followers"><p><span style="" class="count_no total_touch">0</span></p></div>
+                                            <div class="followers" style="color:red;height:7px;background:#ff7272"></div>
+                                            <div class="" style="font-size:11px"><i class="dribble-icon" style="width: 45px;height: 45px;display: block;background: url(images/khas.png) no-repeat;margin: 0 auto;background-size: contain;"></i>Projek <br/>Khas/Teknikal</div></a>
+                                        </li>
+                                        <li><a href="#companylist/PMR" class="facebook-followers">
+                                            <div class="followers"><p><span style="" class="count_no total_cases">0</span></p></div>
+                                            <div class="followers" style="color:red;height:7px;background:#01b4b4"></div>
+                                            <div class="" style="font-size:11px"><i class="facebook-icon" style="width: 45px;height: 45px;display: block;background: url(images/mesra.png) no-repeat;margin: 0 auto;background-size: contain;"></i>Projek <br/>Mesra Rakyat</div></a>
+                                        </li>
+                                        <li><a href="#companylist/PIA" class="email company_link">
+                                            <div class="followers"><p><span style="" class="count_no total_company">0</span></p></div>
+                                            <div class="followers" style="color:red;height:7px;background:#ffc65e"></div>
+                                            <div class="" style="font-size:11px"><i class="email-icon" style="width: 45px;height: 45px;display: block;background: url(images/piapias.png) no-repeat;margin: 0 auto;background-size: contain;"></i>Projek <br/>PIA/PIAS</div></a>
+                                        </li>
+                                        <li><a href="#companylist/RMLT" class="dribble">
+                                            <div class="followers"><p><span style="" class="count_no total_cm">0</span></p></div>
+                                            <div class="followers" style="color:red;height:7px;background:lightblue"></div>
+                                            <div class="" style="font-size:11px"><i class="twitter-icon" style="width: 45px;height: 45px;display: block;background: url(images/RMLT.png) no-repeat;margin: 0 auto;background-size: contain;"></i>RMLT<br/>&nbsp;</div></a>
+                                        </li>
+                                    <div class="clear"> </div>
+                                </ul>
+                            </div>
+                            <div class="ui segment raised blue">
+                                <form id="carian-projek-front">
+                                    <div class="ui left labeled icon input fluid" style="font-size:16px">
+                                        <i class="search icon"></i>
+                                        <input placeholder="Carian Projek" type="search" id="search-project" name="searchproject">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <p><a href="#aboutUs" >&copy</a> 2014 PPPN Perak. iMonitor v<span id="appversion2"></span>. <a class="" id="" onclick="app.logout();">Logout <i class="fa fa-sign-out"></i><i class="fa fa-chevron-right" style="color: #fff;float: right;margin-top: 2px;"></i></a> 
+                        </p>
+
+                        </div>
+                    </div>
+                    <div class="error_display" style="display:none;opacity:0">
+                        <div class="error_display_block">Error connecting to iMonitor Server</div>
+                        <a onclick="loadFront=false;loadedFrontPanel();" class="button" style="width:50%">Retry</a>
+                    </div>
+                </div>
+            </div>
+            <div title='Account Summary' class="panel" id="accountSummary" data-nav="none" data-aside="sidemenu" data-footer="none"  data-load="loadedAccountSummary" >
+                <div class="ui segment" style="display: block;">
+                <div class="folder-current-user ui raised segment" style="margin:5px;">
+                    <ul class="users-num-list">
+                        <div class="ui ribbon label blue fluid" style="font-size:12px; font-weight:bold;margin:-1px">Account Summary</div>
+                        <a class="item">
+                        <br><br>
+                                <span class="weeks-num">#C/Week</span><span class="users-num">#All</span>
+                                <br><br>
+                                <span class="weeks-num"> </span>
+                            </a>
+                        <li class="touchpoints"><b>Touch Points</b><span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="interaction-template" style="display:none"><span class="interaction-type">Call</span><span class="weeks-num">0</span><span class="users-num">0</span></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div title='Location' class="panel" id="projectLocation" data-nav="none" data-aside="sidemenu" data-footer="none"  data-load="loadedProjectLocation" style="overflow:hidden;" data-unload="unloadProjectLocation">
+                <header>
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Lokasi</h1>
+                    <a class="button save-location" style="float:right;font-size:14px" href="#">Simpan</a>
+                </header>
+                <div id="gmaps" style="width:100%;height:90%" style="overflow:visible;"></div>
+                <div class="button-grouped flex tabbed block">
+                    <a class="button update-location" onclick="updateLocation();">Kemaskini Lokasi</a>
+                    <a class="button navigate-location" href="#">Navigasi</a>
+                </div>
+            </div>
+
+            <div title='aboutUs' class="panel" id="aboutUs" data-nav="none" data-aside="sidemenu" data-footer="none"  >
+                <header>
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Kembali</a>
+                        <h1>About Us</h1>
+                </header>
+                <div ><p>
+                <b>iMonitor</b><br>
+                Aplikasi mudah alih untuk tujuan pemantauan pelaksanaan projek-projek fizikal kerajaan yang menggunakan peruntukan ICU JPM di negeri Perak.<br><br>
+                <b>SILVER OBSERVER</b><br>
+                Kumpulan yang bertanggungjawab melahirkan idea dan membangunkan aplikasi ini bagi menyertai pertandingan KIK ICU JPM 2014 dan telah menjadi <b>JOHAN.</b></p>
+                <img src="images/aboutUs.jpg" width=100% /><p></p>
+                Fasilitator: Aza The Great<br>
+                Ketua Kumpulan: Faruz Thor Sariz<br>
+                Setiausaha: Nor Amoi Hadzni<br>
+                Naib Setiausaha: Nuru HannahCute Wani<br>
+                Pengulas: Tok Penghulu Shukhairi<br>
+                Emcee: Mohd Bionik Fariz<br>
+                Pendebat: Mohd Adie Skull<br>
+                Logistik: Rosalinda d'Amor<br>
+                Pareto: Abg Aji Sham<br>
+                Montaj: Mohd eL Kamil<br>
+                Sistem: Aie Shinji<br><br><p></p>
+                <div class="ui label red fluid" style="font-size:12px; font-weight:bold;margin-left:-1px">Dibangunkan menggunakan framework <a href="javascript:;" onclick="window.open('http://corrad.my', '_system');"> CORRAD</a> 2014</div>
+                </div>
+            </div>
+
+
+
+
+            <div title='Case Summary' class="panel" id="casesSummary" data-nav="none" data-aside="sidemenu" data-footer="none"  data-load="loadedCasesSummary" >
+                <div class="ui segment" style="display: block;">
+                <div class="folder-current-user ui raised segment" style="margin:5px;">
+                    <ul class="users-num-list">
+                        <div class="ui ribbon label blue fluid" style="font-size:12px; font-weight:bold;margin:-1px">Case</div>
+                        <a class="item">
+                        <br><br>
+                                <span class="weeks-num">#C/Week</span><span class="users-num">#All</span>
+                                <br><br>
+                                <span class="weeks-num"> </span>
+                            </a>
+                        <li class="openc">Open Case<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="closedc">Closed Case<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="reopenc">Reopen Case<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="pendingc">Pending Case<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="resolvedc">Resolved Case<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                        <li class="exceptionc">Exception<span class="weeks-num">0</span><span class="users-num">0</span></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!---------------------------------------------->
+            <!-- Account Contact -->
+            <div title='Contact' id="companyContact" class="panel" data-load="loadedCompanyContact" data-unload="unloadedPanel" data-tab="navbar_home" data-nav="none" data-aside="sidemenu" data-footer="none" style="background-color: #f7f7f7">
+                 <header>
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Contact</h1>
+                    <a class="button add-new-contact-button" style="float:right;font-size:14px" href="#">Add Contact</a>
+                </header>
+                <div class="company-contact-list">
+                    <div class="ui segment contact-template" style="display:none">
+                        <ul class="contactS list">
+                            <li style="font-weight: bold;font-size:16px; border-top:none" class="ctc-name">Yong Chong</li>
+                            <li class="contactSLi ctc-role"><span class="ctc-role">Directore</span></li>
+                            <li class="contactSLi ctc-department"><h3>Department</h3><span class="ctc-department">Directore</span></li>
+                            <li class="contactSLi ctc-email"><a><h3>Email</h3><span class="ctc-email">+6032226666</span> &nbsp;<i class="ui label blue fa fa-envelope fa-lg" style="float:right;font-size:16px"></i></a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+            <!-- Account Details -->
+            <div title='Perincian Projek' id="companyDetail" class="panel" data-load="loadedCompanyDetail" data-unload="unloadedPanel" data-tab="navbar_homeloaded" data-nav="none" data-aside="sidemenu" data-footer="none" style="background-color: #f7f7f7">
+                <ul class="list_cont list">
+                </ul>
+                <div class="ui segment comp_details" style="display:none" id="company-detail">
+                    <div class="button-grouped flex tabbed">
+                        <a class="button pressed tab-button" data-ignore-pressed="true" tab-link="tab-info"><i class="fa fa-info fa-lg" style="color: #e3000b;"></i>&nbsp;&nbsp;&nbsp;INFO</a>
+                        <a class="button tab-button" data-ignore-pressed="true" tab-link="tab-history"><i class="fa fa-clock-o fa-lg" style="color: #e3000b;"></i>&nbsp;&nbsp;&nbsp;KEMAJUAN</a>
+                        <a class="button tab-button srehide loadamr" data-ignore-pressed="true" tab-link="tab-issue"><i class="fa fa-bar-chart-o fa-lg" style="color: #e3000b;"></i>&nbsp;&nbsp;&nbsp;ISU</a>
+                    </div>
+                    <div id="" class="tab-content tab-info tab-selected ">
+                        <div class="ui raised segment srehide">
+                            <div class="ui ribbon label blue fluid" style="font-size:12px; font-weight:bold;margin-left:-1px">Maklumat Projek</div>
+                            <p><span class="c-x"></span></p>
+                            <div class="ui ribbon label fluid"  style="font-size:12px;margin-left:-1px">Tahun</div><p><span class="c-comp-reg">CompanyRegNo</span></p>
+                            <!-- <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">no projek</div><p><span class="c-msc-file-id">MSCFileID</span></p> -->
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">nama projek</div> <p><span class="c-account-code"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">Daerah</div> <p><span class="c-daerah"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">lokasi</div><p>
+                                <a href="#projectLocation" class="button locButton" style="float: right;margin-right: 25px;">Koordinat <i class="fa fa-location-arrow"></i></a>
+                                <span class="c-parent-company"></span>
+                            </p>
+
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">parlimen</div> <p><span class="c-parlimen"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">dun</div> <p><span class="c-dun"></span></p>
+                            
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">nilai peruntukan</div><p><span class="c-account-type"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">kos projek</div> <p><span class="c-category"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">tarikh mula</div> <p><span class="c-industry"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">tarkh siap asal</div><p><span class="c-account-group"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">tarikh siap sebenar</div><p><span class="c-classification"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">agensi pelaksana</div><p><span class="c-bumi-status"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">kontraktor</div><p><span class="c-business-phone"></span>
+                            <a href="#" class="button tel_kon_button" style="float: right;margin-right: 25px;"><i class="fa fa-phone"></i></a></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">konsultan</div><p><span class="c-fax"></span></p>
+                            <a href="#" class="button tel_konsultan_button" style="float: right;margin-right: 25px;"><i class="fa fa-phone"></i></a></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">status kemajuan</div><p><span class="c-website"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">Pegawai Bertanggungjawab</div><p><span class="c-ac-meeting-date"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">tarikh Kemaskini</div><p><span class="c-comp-email"></span></p>
+                            <div class="ui ribbon label fluid" style="font-size:12px;margin-left:-1px">kemaskini oleh</div> <p><span class="c-operation"></span></p>
+                        </div>
+                    </div>
+                    <div id="" class="tab-content tab-history">
+                        <div class="ui raised segment">
+                            <div class="ui ribbon label blue fluid" style="font-size:12px; font-weight:bold;margin-left:-1px">Senarai Status Kemajuan</div>
+                            <div class="ui tertiary">
+                              <div class="field">
+                                <a class="button" href="#addProjekKemajuan" id="add-project-kemajuan-button"><i class="fa fa-plus fa-lg" style=""></i> Tambah Status</a>
+
+                              </div>
+                            </div>
+                        </div>
+                        <br>
+
+                         <!-- cbp_tmtimeline start here -->
+                        <ul class="cbp_tmtimeline timeline-status">
+                            <li style="display:none" class="cbp_tmtimeline-template">
+                                <time class="cbp_tmtime_DISABLED" datetime="2013-04-10"><span style="margin-top:20px"></span></time>
+                                <div class="cbp_tmicon"></div>
+                                <div class="cbp_tmlabel">
+                                    <a href="javascript:;" class="i_cases" style="position:absolute;right:55px;color:white;display:none;margin-top:-20px" ><i class="fa fa-ticket fa-lg" style=""></i></a>
+                                    <a href="javascript:;" class="i_details" style="position:absolute;right:30px;color:white;display:none;margin-top:-20px"><i class="fa fa-file-text-o fa-lg" style=""></i></a>
+                                    <i class="fa fa-chevron-down history-arrow"></i>
+                                    <h2 class="interaction-header"></h2>
+                                    <time class="cbp_tmtime" datetime="2013-04-10"><span style="margin-top:10px;color:GRAY;float:right"></span></time>
+                                        <div class="i_subject historyText2" style="margin-top:10px"></div>
+                                        <p class="" style="text-align:right">
+                                            <a class="button i_update_button" style="margin-bottom:0;" href="#updateProjekKemajuan"><i class="fa fa-pencil fa-lg"></i></a>
+                                            <a class="button i_komen_button" style="margin-bottom:0;" href="#updateKemajuanKomen"><i class="fa fa-comment-o fa-lg"></i></a>
+                                        	<span class="ui label status_label" style="vertical-align: bottom;">
+                                                <i class="fa fa-table"></i> <span class="i_venue"></span>% |
+                                        	   <i class="fa fa-clock-o"></i> <span class="i_startdate"></span>%
+                                        	   <i class="fa fa-comment status_comment" style="color:red"></i>
+                                            </span>
+                                        </p>
+                                    <div class="interaction-detail">
+                                        <p class="historyText"><b>% Jadual : </b><span class="i_venue"></span> | <b>% Sebenar : </b><span class="i_startdate"></span></p>
+                                        <p class="historyText"><b>Catatan : </b><span class="i_desc"></span></p>
+                                        <p class="historyText"><b>Kemaskini oleh : </b><span class="i_kemaskini"></span></p>
+                                        <div class="i_komen">
+                                        	<p class="ui ribbon label">Komen Kemajuan</p>
+                                        	<div class="yellow ui message i_komen_message"></div>
+                                       		<p class="historyText"><b>Komen oleh : </b><span class="i_kemaskini_komen"></span></p>
+                                        </div>
+                                        <div class='img_file'>
+                                        	<p class="ui ribbon label">Gambar Kemajuan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- cbp_tmtimeline end here -->
+                    </div>
+	                <div id="" class="tab-content tab-issue">
+	                	<div class="ui raised segment">
+                            <div class="ui ribbon label red fluid" style="font-size:12px; font-weight:bold;margin-left:-1px">Senarai Status Isu</div>
+                            <div class="ui tertiary">
+                              <div class="field">
+                                <a class="button" href="#addProjekIsu" id="add-project-isu-button"><i class="fa fa-plus fa-lg" style=""></i> Tambah Isu</a>
+
+                              </div>
+                            </div>
+                        </div>
+                        <br>
+	                  	<ul class="cbp_tmtimeline timeline-issue">
+                            <li style="display:none" class="cbp_tmtimeline-issue-template">
+                                <div class="cbp_tmicon"></div>
+                                <div class="cbp_tmlabel">
+                                    <a href="javascript:;" class="i_cases" style="position:absolute;right:55px;color:white;display:none;margin-top:-20px" ><i class="fa fa-ticket fa-lg" style=""></i></a>
+                                    <a href="javascript:;" class="i_details" style="position:absolute;right:30px;color:white;display:none;margin-top:-20px"><i class="fa fa-file-text-o fa-lg" style=""></i></a>
+                                    <i class="fa fa-chevron-down history-arrow"></i>
+                                    <h2 class="interaction-header"></h2>
+                                    <div class="selesai_pada historyText2" style="margin-top:10px"></div>
+                                    <div class="interaction-detail">
+                                        <p class="historyText"><b>Isu : </b><span class="i_isu"></span></p>
+                                        <p class="historyText"><b>Tindakan : </b><span class="i_tindakan"></span></p>
+                                        <p class="historyText"><b>Jangkaan Selesai : </b><span class="i_j_selesai"></span></p>
+                                        <p class="historyText"><b>Sumber Isu : </b><span class="i_sumber_isu"></span></p>
+                                        <p class="historyText"><b>Nama Kemaskini : </b><span class="i_kemaskini"></span></p>
+                                        <p class="" style="text-align:right">
+                                            <a class="button u_update_button" style="margin-bottom:0;" href="#updateProjekIsu"><i class="fa fa-pencil fa-lg"></i></a>
+                                            <a class="button u_komen_button" style="margin-bottom:0;" href="#updateIsuKomen"><i class="fa fa-comment-o fa-lg"></i></a>
+                                        </p>
+                                        <div class="i_komen">
+                                            <p class="ui ribbon label">Komen Isu</p>
+                                            <div class="yellow ui message i_komen_message"></div>
+                                            <p class="historyText"><b>Komen oleh : </b><span class="i_kemaskini_komen"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+	                 	</ul>
+	                </div>
+	                <div class="error_display" style="display:none;opacity:0">
+	                    <div class="error_display_block">Connection error</div>
+	                    <a onclick="loadFront=false;loadedCompanyDetail();" class="button" style="width:50%">Retry</a>
+	                </div>
+            </div>
+            <!---------------------------------------------->
+            <div title='Senarai Projek' id="companylist" class="panel" data-load="loadedCompanyList" data-unload="unloadedPanel" data-tab="navbar_home" data-nav="none" data-aside="sidemenu" data-footer="none">
+                <!--END COMPANY_DETAILS_TEMPLATE-->
+                <ul class="list">
+                    <li id="searchrow">
+                        <div class="ui grey segment">
+                        <form id="form-company-list">
+                            <div class="ui tertiary">
+                              <div class="field">
+                                <div class="ui left labeled icon input fluid"  style="font-size:16px">
+                                    <i class="search icon"></i>
+                                    <input placeholder="Carian projek" type="search" id="search-project-list">
+                                </div>
+                              </div>
+                              <div class="field  fluid">
+                                 <label><span class="title" style="font-face:verdana; font-size:14px">Status</span></label>
+                                 <select name="filtercomp" id="select_company_filter" style="width:67%">
+                                    <option selected value="">Semua</option>
+                                    <option value="SS" >Siap Sepenuhnya</option>
+                                    <option value="DJ" >Dahului Jadual</option>
+                                    <option value="IJ" >Ikut Jadual</option>
+                                    <option value="DP" >Dalam Pelaksanaan</option>
+                                    <option value="PS" >Projek Sakit</option>
+                                    <option value="LJ" >Lewat Jadual</option>
+                                    <option value="BM" >Belum Mula</option>
+                                </select>
+                              </div>
+
+                              <h1 class="ui ribbon label blue kategori-projek" style="font-size: 15px;">
+
+                              </h1>
+                            </div>
+
+                        </form>
+                        </div><br>
+                    </li>
+                </ul>
+                <ul class="list_cont list">
+
+                    <li class="" style="display:none;" id="template_comp_list">
+                        <a href="#companyDetail" class="comp-detail-link" style="margin-right: -10px;">
+                            <span class="company-logo"><div class="item"><img class="circular c-logo" src="images/company_placeholder4.png"/></div></span>
+                            <span style="float:right"><i class="fa fa-chevron-right comp_arrow" style="color: #e3000b;"></i></span>
+
+                                <h3><span class="title"></span></h3>
+                                <!--
+                                <span style="float:right"><i class="fa fa-chevron-down comp_arrow" style="color: #e3000b;"></i></span>
+                                 -->
+
+                            <div class="menu_list" style="margin-top:10px;text-align:right">
+                                <div class="ui label"><i class="fa fa-user"></i> <span class="c-username"></span></div>
+                            </div>
+
+                            <div class="menu_list" style="margin-top:8px;text-align:right">
+                                <a class="ui label red"><div align=right><i class="fa fa-hand-o-up"></i> <span class="c-touch">0</span></div></a>
+                                <a class="ui label "><div align=right><i class="fa fa-table"></i> <span class="c-phone">0</span></div></a>
+                                <a class="ui label "><div align=right><i class="fa fa-clock-o"></i> <span class="c-email">0</span></div></a>
+                                <a class="ui label "><div align=right><i class="fa fa-exclamation"></i> <span class="c-walkin">0</span></div></a>
+
+                            </div>
+                        </a>
+                        </li> <!--END COMPANY_LIST-->
+                    </ul>
+            </div>
+            <!-- LOGIN PANEL -->
+            <!---------------------------------------------->
+            <div title='Welcome' id="login" class="panel" data-header="none" data-load="loadedLoginPanel" data-footer="none" data-aside="none"
+                style="background-image:url('bg_imon.png');  background-repeat: no-repeat; background-size: 100% auto; background-position: top; ">
+                    <br><br><br>
+                    <div id="headlogin" style="margin-left: 40%; width: 150px;">
+                    <img src="images/mdec_login.png" width=150px style="border:none;" />
+                    </div>
+                    <div id="loginarea">
+                        <form id="form-login" onsubmit="">
+                        <br>
+                        <p align=center style="font-weight:bold; font-size:18px; color:#6e6e6e"><b>Log Masuk iMonitor</b></p>
+                        <div class="input-grouping margin-bottom-sm input focus bayang">
+                        <span class="input-group-addon"><a class="fa fa-user fa-fw" style="color:#ccc"></a></span>
+                        <input class="form-control" style="margin-bottom: 0px;border-bottom-left-radius: 0; border-top-left-radius: 0;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nama Pengguna" id="username" value="">
+                        </div>
+                        <div class="input-grouping bayang">
+                        <span class="input-group-addon"><a class="fa fa-key fa-fw" style="color:#ccc"></a></span>
+                        <input class="form-control" style="margin-bottom: 0px;border-bottom-left-radius: 0;border-top-left-radius: 0;" type="password" placeholder="Katalaluan" id="password" value="">
+                        </div>
+                        <!--<a class="button redbutton bayang" id="loginbutton" href="javascript:;" onclick="app.login()" style="width:90%">LOGIN</a>-->
+                        <!-- <input type="submit" value="LOGIN" class="button redbutton bayang" id="loginbutton" style="width:90%" /> -->
+                        <a class="button redbutton bayang" style="width:90%" id="loginbutton" onclick="app.login()">LOGIN</a>
+                        <div class="error-message" style="font-size:18px; color:red; font-face:verdana;"></div>
+                        </form>
+                        <br><br><br>
+                        <div align=center style="color:#ababab">
+                        <span id="">iMonitor on Wheel (Version <span id="appversion"></span>)</span><br/>
+                        Pejabat Pembangunan Persekutuan Negeri Perak.<br/>
+                        All rights reserved.
+                        </div>
+                    </div>
+            </div>
+            <div title="Search Contact" id="searchContactMdec" class="panel" data-modal="true" data-unload="unloadedPanel" data-load="loadContactMdec">
+                <header>
+                    <a id="backButton" onclick="$.ui.hideModal()" class='button'>Batal</a>
+                    <h1>Search Staff</h1>
+                </header>
+                <br>
+                    <form id="form-mdec-search">
+                    <div class="ui raised segment">
+                        <div style="font-weight:bold; font-size:14px">Search MDEC Staff</div>
+                        <div class="ui tertiary">
+                          <div class="field">
+                            <br>
+                            <div class="ui left labeled icon input fluid" style="font-size:16px">
+                              <i class="search icon"></i>
+                              <input placeholder="Search Staff" type="search" id="mdec-staff-input">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </form>
+                    <br>
+                <ul class="list mdec-search-result"></ul>
+            </div>
+            <!---------------------------------------------->
+
+            <div title='' id="addProjekKemajuan" class="panel" data-footer="none" data-load="loadedAddProjekKemajuan" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Tambah Kemajuan</h1>
+                    <a class="button save-projek-kemajuan" style="float:right;font-size:14px" onclick="jQuery('#form-save-projek-kemajuan').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Tambah Kemajuan Projek</div>
+                <div class="input-group">
+                    <form id="form-save-projek-kemajuan">
+                        <label for="ai-peratus_jadual">Peratus Jadual:<red>*</red></label>
+                        <input type="number" placeholder="% jadual" class="" id="ai-peratus_jadual" name="peratus_jadual" required/>
+                        <label for="ai-peratus_sebenar">Peratus Sebenar:<red>*</red></label>
+                        <input type="number" placeholder="% sebenar" class="change_sebenar" id="ai-peratus_sebenar" name="peratus_sebenar" required/>
+                        <label for="ai-tkh_siap_sebenar" class="hide-onsebenar" style="display:none">Tarikh Siap Sebenar:<red>*</red></label>
+                        <input type="date" placeholder="" class="ai-tkh_siap_sebenar hide-onsebenar" style="display:none" name="tkh_siap_sebenar" required/>
+                        <input type="hidden" class="ai-id_project" name="id_project"/>
+                        <input type="hidden" class="ai-user_id" name="user_id"/>
+                        <input type="hidden" class="ai-status_kemajuan" name="status_kemajuan" />
+                        <label for="enddate">Catatan:</label>
+                        <textarea rows="6" placeholder="Catatan" class="jq-ui-forms" name="catatan"></textarea>
+                         <ul class="attached-list list inset" style="display:none"></ul>
+                        <p id="anchor-attachment">Gambar (Maks: 5 Gambar)</p>
+                        <a class="button add-attachment" href="javascript:;"><i class="fa fa-paperclip" style="color: #e3000b;"></i> Tambah gambar...</a>
+                    </form>
+                </div>
+            </div>
+            <div title='' id="updateProjekKemajuan" class="panel" data-footer="none" data-load="loadedUpdateProjekKemajuan" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Kemaskini Kemajuan</h1>
+                    <a class="button update-projek-kemajuan" style="float:right;font-size:14px" onclick="jQuery('#form-update-projek-kemajuan').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Kemaskini Kemajuan Projek</div>
+                <div class="input-group">
+                    <form id="form-update-projek-kemajuan">
+                        <label for="contactid">Peratus Jadual:<red>*</red></label>
+                        <input type="number" placeholder="% jadual" class="up-peratus_jadual" name="peratus_jadual" required/>
+                        <label for="contactid">Peratus Sebenar:<red>*</red></label>
+                        <input type="number" placeholder="% sebenar" class="up-peratus_sebenar change_sebenar" name="peratus_sebenar" required/>
+                        <label for="ai-tkh_siap_sebenar" class="hide-onsebenar" style="display:none">Tarikh Siap Sebenar:<red>*</red></label>
+                        <input type="date" placeholder="" class="ai-tkh_siap_sebenar hide-onsebenar" style="display:none" name="tkh_siap_sebenar" required/>
+                        <input type="hidden" class="up-user_id" name="user_id" />
+                        <input type="hidden" class="up-id_kemajuan" name="id_kemajuan" />
+                        <input type="hidden" class="up-id_projek" name="id_project" />
+                        <input type="hidden" class="kemajuan_index" name="kemajuan_index" />
+                        <label for="enddate">Catatan:</label>
+                        <textarea rows="6" placeholder="Catatan" class="jq-ui-forms up-catatan" name="catatan"></textarea>
+                        <ul class="attached-list list inset" style="display:none"></ul>
+                        <p id="anchor-attachment">Attachment (Maks: 5 gambar)</p>
+                        <a class="button add-attachment" href="javascript:;"><i class="fa fa-paperclip" style="color: #e3000b;"></i> Tambah gambar...</a>
+                    </form>
+                </div>
+            </div>
+            <div title='' id="updateKemajuanKomen" class="panel" data-footer="none" data-load="loadedUpdateKemajuanKomen" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Komen Kemajuan</h1>
+                    <a class="button update-kemajuan-komen" style="float:right;font-size:14px" onclick="jQuery('#form-update-kemajuan-komen').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Komen Kemajuan Projek</div>
+                <div class="input-group">
+                    <div class='ui segment raised blue'>
+                        <p>Peratus Jadual: <span class="kk-peratus_jadual"></span></p>
+                        <p>Peratus Sebenar: <span class="kk-peratus_sebenar"></span></p>
+                        <p>Catatan: <span class="kk-catatan"></span></p>
+                    </div>
+                    <form id="form-update-kemajuan-komen">
+                        <input type="hidden" class="kk-user_id" name="user_id" />
+                        <input type="hidden" class="kk-id_kemajuan" name="id_kemajuan" />
+                        <label for="uk-komen">Komen:<red>*</red></label>
+                        <textarea rows="6" placeholder="Masukkan komen" class="jq-ui-forms uk-komen" id="uk-komen" name="komen" required></textarea>
+                    </form>
+                </div>
+            </div>
+            <div title='' id="addProjekIsu" class="panel" data-footer="none" data-load="loadedAddProjekIsu" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Tambah Isu</h1>
+                    <a class="button save-projek-isu" style="float:right;font-size:14px" onclick="jQuery('#form-save-projek-isu').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Tambah Isu Projek</div>
+                <div class="input-group">
+                    <form id="form-save-projek-isu">
+                        <label>Isu<red>*</red></label>
+                        <textarea rows="6" id="au-catatan" class="au-catatan" placeholder="Isu" name="isu" required></textarea>
+                        <label for="au-tindakan">Tindakan</label>
+                        <textarea rows="6" id="au-tindakan" class="au-tindakan" placeholder="Tindakan" class="" name="tindakan"></textarea>
+                        <input type="hidden" class="au-id_project" name="id_project" />
+                        <input type="hidden" class="au-user_id" name="user_id" />
+                        <label for="">Jangkaan Selesai<red>*</red></label>
+                        <input type="date" class="au-jangkaan_selesai" name="tkh_jangka_selesai" required/>
+
+                        <label for="">Tarikh Selesai</label>
+                        <input type="date" class="au-tkh_selesai" name="tkh_selesai" />
+
+                        <label for="">Sumber aduan<red>*</red></label>
+                        <select id="au-isu" name="sumber_isu" required>
+                            <option disabled selected value="">sumber isu...</option>
+                            <option value="Aduan">Aduan</option>
+                            <option value="MTNg">MTNg</option>
+                            <option value="JKTNg">JKTNg</option>
+                            <option value="PSC">PSC</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div title='' id="updateProjekIsu" class="panel" data-footer="none" data-load="loadedUpdateProjekIsu" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Kemaskini Isu</h1>
+                    <a class="button update-projek-isu" style="float:right;font-size:14px" onclick="jQuery('#form-update-projek-isu').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Kemaskini Isu Projek</div>
+                <div class="input-group">
+                    <form id="form-update-projek-isu">
+                        <label>Isu<red>*</red></label>
+                        <textarea rows="6" id="upi-isu" class="upi-isu" placeholder="Isu" name="isu" required></textarea>
+                        <label for="upi-tindakan">Tindakan</label>
+                        <textarea rows="6" id="upi-tindakan" class="upi-tindakan" placeholder="Tindakan" class="" name="tindakan"></textarea>
+                        <input type="hidden" class="upi-id_isu" name="id_isu" />
+                        <input type="hidden" class="upi-user_id" name="user_id" />
+                        <label for="">Jangkaan Selesai<red>*</red></label>
+                        <input type="date" class="upi-jangkaan_selesai" name="tkh_jangka_selesai" required/>
+
+                        <label for="">Tarikh Selesai</label>
+                        <input type="date" class="upi-tkh_selesai" name="tkh_selesai" />
+
+                        <label for="">Sumber aduan<red>*</red></label>
+                        <select id="upi-sumber_isu" name="sumber_isu" required>
+                            <option disabled selected value="">sumber isu...</option>
+                            <option value="Aduan">Aduan</option>
+                            <option value="MTNg">MTNg</option>
+                            <option value="JKTNg">JKTNg</option>
+                            <option value="PSC">PSC</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div title='' id="updateIsuKomen" class="panel" data-footer="none" data-load="loadedUpdateIsuKomen" data-header="">
+                 <header id="">
+                    <a id="backButton" onclick="$.ui.goBack();" class='button'>Batal</a>
+                        <h1>Komen Isu</h1>
+                    <a class="button update-isu-komen" style="float:right;font-size:14px" onclick="jQuery('#form-update-isu-komen').submit()">Simpan</a>
+                </header>
+                <div class="formGroupHead">Komen Isu Projek</div>
+                <div class="input-group">
+                    <div class='ui segment raised blue'>
+                        <div class="selesai_pada" style="margin-top:10px"></div>
+                        <p class=""><b>Isu : </b><span class="i_isu"></span></p>
+                        <p class=""><b>Tindakan : </b><span class="i_tindakan"></span></p>
+                        <p class=""><b>Jangkaan Selesai : </b><span class="i_j_selesai"></span></p>
+                        <p class=""><b>Sumber Isu : </b><span class="i_sumber_isu"></span></p>
+                        <p class=""><b>Nama Kemaskini : </b><span class="i_kemaskini"></span></p>
+                    </div>
+                    <form id="form-update-isu-komen">
+                        <input type="hidden" class="ik-user_id" name="user_id" />
+                        <input type="hidden" class="ik-id_isu" name="id_isu" />
+                        <label for="ik-komen">Komen:<red>*</red></label>
+                        <textarea rows="6" placeholder="Masukkan komen" class="ik-komen" id="ik-komen" name="komen" required></textarea>
+                    </form>
+                </div>
+            </div>
+        </div> <!--END CONTENT -->
+            <!---------------------------------------------->
+            <!-- MODALS -->
+        <div title="Add Attachment" id="addAttachment" class="panel" data-modal="true" data-unload="unloadedPanel" data-load="loadedAttachment">
+             <header>
+                <a id="backButton" onclick="$.ui.hideModal()" class='button'>Batal</a>
+                <h1>Muatnaik Gambar</h1>
+                <a class="button" style="float:right;font-size:14px"  onclick="saveAttachmentToArray();">Simpan</a>
+            </header>
+            <br>
+            <div class="formGroupHead">Tambah Gambar</div>
+            <div class="input-group">
+                <a class="button" id="selectFileBtn"><i class="fa fa-paperclip" style="color: #e3000b;"></i> Dari Galeri</a>
+                <a class="button" id="cameraBtn" onclick="capturePhoto();"><i class="fa fa-camera" style="color: #e3000b;"></i> Kamera</a>
+                <input type="hidden" id="attachment-accountid" class="" value="" name="attachment-accountid" />
+                <p>Saiz maksimum gambar adalah 5MB</p>
+                <textarea rows="6" placeholder="Deskripsi gambar" class="" id="attachment-description"></textarea>
+                 <div id="upload-result" style="width: 100%;">
+                 </div>
+                 <img id="smallImage" src="" />
+            </div>
+        </div>
+        <div id="navbar">
+            <a href="#main/1/3" id='navbar_home' class='icon home'>home <span class='af-badge lr'>3</span></a><a href="#af" id='navbar_js' class="icon target">selectors</a><a href="#afuidemo" id='navbar_ui' class="icon picture">ui</a><a href="#afweb" id='navbar_plugins' class="icon key">plugins</a>
+        </div>
+        <div id="dtBox"></div>
+     </body>
+</html>
