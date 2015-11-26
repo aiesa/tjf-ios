@@ -1,0 +1,181 @@
+@font-face {
+	font-family: 'salesbinder';
+	src:url('https://c460914.ssl.cf2.rackcdn.com/salesbinder.eot');
+	src:url('https://c460914.ssl.cf2.rackcdn.com/salesbinder.eot?#iefix') format('embedded-opentype'),
+		url('https://c460914.ssl.cf2.rackcdn.com/salesbinder.svg#salesbinder') format('svg'),
+		url('https://c460914.ssl.cf2.rackcdn.com/salesbinder.woff') format('woff'),
+		url('https://c460914.ssl.cf2.rackcdn.com/salesbinder.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'salesbinder';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'salesbinder';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: middle;
+}
+.icon-font {
+	line-height: 16px;
+	font-size:180%;
+	padding-right:6px;
+}
+.icon-gear:before {
+	content: "\21";
+}
+.icon-download:before {
+	content: "\22";
+}
+.icon-user:before {
+	content: "\23";
+}
+.icon-upload:before {
+	content: "\24";
+}
+.icon-star:before {
+	content: "\25";
+}
+.icon-star-solid:before {
+	content: "\26";
+}
+.icon-print:before {
+	content: "\27";
+}
+.icon-list:before {
+	content: "\28";
+}
+.icon-save:before {
+	content: "\29";
+}
+.icon-search:before {
+	content: "\2a";
+}
+.icon-cart:before {
+	content: "\2b";
+}
+.icon-forward:before {
+	content: "\2c";
+}
+.icon-mail:before {
+	content: "\2d";
+}
+.icon-users:before {
+	content: "\2e";
+}
+.icon-cloud-upload:before {
+	content: "\2f";
+}
+.icon-grip:before {
+	content: "\30";
+}
+.icon-message-bubble:before {
+	content: "\31";
+}
+.icon-dashboard:before {
+	content: "\32";
+}
+.icon-logout:before {
+	content: "\33";
+}
+.icon-settings:before {
+	content: "\34";
+}
+.icon-trash:before {
+	content: "\35";
+}
+.icon-wrench:before {
+	content: "\36";
+}
+.icon-groups:before {
+	content: "\37";
+}
+.icon-graph:before {
+	content: "\38";
+}
+.icon-lock:before {
+	content: "\39";
+}
+.icon-key:before {
+	content: "\3a";
+}
+.icon-earth:before {
+	content: "\3b";
+}
+.icon-document:before {
+	content: "\3c";
+}
+.icon-bell:before {
+	content: "\3d";
+}
+.icon-home:before {
+	content: "\3e";
+}
+.icon-unlock:before {
+	content: "\3f";
+}
+.icon-binder:before {
+	content: "\40";
+}
+.icon-apps:before {
+	content: "\41";
+}
+.icon-open-book:before {
+	content: "\42";
+}
+.icon-write:before {
+	content: "\43";
+}
+.icon-plus:before {
+	content: "\44";
+}
+.icon-location:before {
+	content: "\45";
+}
+.icon-twitter:before {
+	content: "\46";
+}
+.icon-facebook:before {
+	content: "\47";
+}
+.icon-tag:before {
+	content: "\48";
+}
+.icon-link:before {
+	content: "\49";
+}
+.icon-information:before {
+	content: "\4a";
+}
+.icon-picture:before {
+	content: "\4b";
+}
+.icon-pen:before {
+	content: "\4c";
+}
+.icon-x:before {
+	content: "\4d";
+}
+.icon-help:before {
+	content: "\4e";
+}

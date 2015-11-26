@@ -1,0 +1,58 @@
+2015-07-07 23:54:55.997 iMonitor[29144:1193762] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Data/Application/45EEFBAD-22B0-4E3D-92EA-97E879539597/Library/Cookies/Cookies.binarycookies
+2015-07-07 23:54:56.277 iMonitor[29144:1193762] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-07 23:54:56.278 iMonitor[29144:1193762] Multi-tasking -> Device: YES, App: YES
+2015-07-07 23:54:56.294 iMonitor[29144:1193762] Unlimited access to network resources
+2015-07-07 23:54:56.304 iMonitor[29144:1193762] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-07 23:54:56.654 iMonitor[29144:1193762] [CDVTimer][keyboard] 0.063002ms
+2015-07-07 23:54:56.664 iMonitor[29144:1193762] [CDVTimer][file] 9.606004ms
+2015-07-07 23:54:56.792 iMonitor[29144:1193762] [CDVTimer][statusbar] 128.302038ms
+2015-07-07 23:54:56.793 iMonitor[29144:1193762] [CDVTimer][TotalPluginStartup] 138.861001ms
+2015-07-07 23:54:56.971 iMonitor[29144:1193762] Resetting plugins due to page load.
+2015-07-07 23:54:57.560 iMonitor[29144:1193762] Finished load of: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Bundle/Application/D7D53E8E-E0C9-4527-B425-C2C503CCB184/iMonitor.app/www/index.html#login
+2015-07-07 23:57:11.620 iMonitor[29514:1195382] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Data/Application/C12AB702-54D5-4AAE-BFB9-C9B4AB4A1EC8/Library/Cookies/Cookies.binarycookies
+2015-07-07 23:57:11.687 iMonitor[29514:1195382] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-07 23:57:11.688 iMonitor[29514:1195382] Multi-tasking -> Device: YES, App: YES
+2015-07-07 23:57:11.689 iMonitor[29514:1195382] Unlimited access to network resources
+2015-07-07 23:57:11.692 iMonitor[29514:1195382] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-07 23:57:11.772 iMonitor[29514:1195382] [CDVTimer][keyboard] 0.064015ms
+2015-07-07 23:57:11.776 iMonitor[29514:1195382] [CDVTimer][file] 3.775001ms
+2015-07-07 23:57:11.806 iMonitor[29514:1195382] [CDVTimer][statusbar] 30.197978ms
+2015-07-07 23:57:11.806 iMonitor[29514:1195382] [CDVTimer][TotalPluginStartup] 34.534037ms
+2015-07-07 23:57:11.901 iMonitor[29514:1195382] Resetting plugins due to page load.
+2015-07-07 23:57:12.250 iMonitor[29514:1195382] Finished load of: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Bundle/Application/42D31B39-9488-47DF-87D3-8AA6665D2B36/iMonitor.app/www/index.html#login
+2015-07-07 23:57:17.519 iMonitor[29514:1195388] Terminating since there is no system app.
+2015-07-08 00:01:46.692 iMonitor[30385:1200351] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Data/Application/BB1CF7B5-36B4-407E-B63D-98CB802364FC/Library/Cookies/Cookies.binarycookies
+2015-07-08 00:01:46.981 iMonitor[30385:1200351] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-08 00:01:46.981 iMonitor[30385:1200351] Multi-tasking -> Device: YES, App: YES
+2015-07-08 00:01:46.994 iMonitor[30385:1200351] Unlimited access to network resources
+2015-07-08 00:01:47.003 iMonitor[30385:1200351] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-08 00:01:47.320 iMonitor[30385:1200351] [CDVTimer][keyboard] 0.057995ms
+2015-07-08 00:01:47.331 iMonitor[30385:1200351] [CDVTimer][file] 10.457993ms
+2015-07-08 00:01:47.461 iMonitor[30385:1200351] [CDVTimer][statusbar] 130.135000ms
+2015-07-08 00:01:47.461 iMonitor[30385:1200351] [CDVTimer][TotalPluginStartup] 141.478002ms
+2015-07-08 00:01:47.645 iMonitor[30385:1200351] Resetting plugins due to page load.
+2015-07-08 00:01:48.311 iMonitor[30385:1200351] Finished load of: file:///Users/asanrivas/Library/Developer/CoreSimulator/Devices/F1F7A197-41FB-4EDE-BE1D-FA8FD309C231/data/Containers/Bundle/Application/F37CF459-FB9C-4723-B98A-EF182C6ACDC3/iMonitor.app/www/index.html#login
+2015-07-08 00:02:03.227 iMonitor[30385:1200436] Communications error: <OS_xpc_error: <error: 0x349c5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x349c83c> { length = 22, contents = "Connection interrupted" }
+}>
